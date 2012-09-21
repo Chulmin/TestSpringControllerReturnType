@@ -1,0 +1,794 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<!-- ===== Project Description ===== -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.epapyrus.gateway</groupId>
+	<artifactId>test-spring-controller-return-type</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>war</packaging>
+  
+	<!-- ===== Dependencies DESCRIPTION ===== -->  
+	
+	<!-- :::::::::: Compile Dependency :::::::::: -->
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>3.1.1.RELEASE</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+			<version>3.1.1.RELEASE</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>3.1.1.RELEASE</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>3.1.1.RELEASE</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-ibatis</artifactId>
+			<version>2.0.8</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>quartz-all</artifactId>
+			<version>1.6.3</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itextpdf</artifactId>
+			<version>5.1.2</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itext-asian</artifactId>
+			<version>5.1.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.0.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.2</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency><dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency><dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.8.3</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency><dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency><dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-exec</artifactId>
+			<version>1.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency><dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>1.4</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency><dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>1.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.2.0.Final</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.directwebremoting</groupId>
+			<artifactId>dwr</artifactId>
+			<version>2.0.3</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.4.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.18</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib-nodep</artifactId>
+			<version>2.2.2</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.6.12</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjtools</artifactId>
+			<version>1.6.12</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>		
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.46</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.lazyluke</groupId>
+			<artifactId>log4jdbc-remix</artifactId>
+			<version>0.2.7</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jzlib</artifactId>
+			<version>1.1.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.10.0</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk16</artifactId>
+			<version>1.46</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+			<version>1.8.6</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>crosscert</groupId>
+			<artifactId>crosscert</artifactId>
+			<version>1.7.0</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4sql</groupId>
+			<artifactId>log4sql</artifactId>
+			<version>7.0.8</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- :::::::::: Test Dependency :::::::::: -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>3.1.1.RELEASE</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>	
+		<dependency>
+			<groupId>org.unitils</groupId>
+			<artifactId>unitils-easymock</artifactId>
+			<version>3.3</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.unitils</groupId>
+			<artifactId>unitils-database</artifactId>
+			<version>3.3</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.unitils</groupId>
+			<artifactId>unitils-spring</artifactId>
+			<version>3.3</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.unitils</groupId>
+			<artifactId>unitils-dbunit</artifactId>
+			<version>3.3</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.unitils</groupId>
+			<artifactId>unitils-inject</artifactId>
+			<version>3.3</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.unitils</groupId>
+			<artifactId>unitils-io</artifactId>
+			<version>3.3</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.unitils</groupId>
+			<artifactId>unitils-mock</artifactId>
+			<version>3.3</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>3.1</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymockclassextension</artifactId>
+			<version>3.1</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+		
+	
+	<!-- ===== Properties Description ===== -->	
+	<properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+ 	</properties>
+
+	
+	<!-- ===== Repositories Description ===== -->	
+	<repositories>
+		<repository>
+    		<id>public</id>
+    		<name>public</name>
+	        <url>http://211.174.156.95:8080/nexus/content/groups/public/</url>	        
+    	    <releases>
+    	    	<enabled>true</enabled></releases>
+        	<snapshots>
+        		<enabled>true</enabled></snapshots>
+		</repository>				
+	</repositories>
+	
+	<pluginRepositories>
+	    <pluginRepository>
+	        <id>public</id>
+	        <name>public</name>
+	        <url>http://211.174.156.95:8080/nexus/content/groups/public/</url>
+	        <releases><enabled>true</enabled></releases>
+	        <snapshots><enabled>true</enabled></snapshots>
+	    </pluginRepository>
+	</pluginRepositories>
+
+
+	
+	<!-- ===== Build Description ===== -->
+	<build>
+		
+		<!-- finalName은 war파일 생성 phase를 실행시 war파일의 이름이 됨 -->
+		<finalName>tscrt</finalName>
+
+		<!-- 소스 코드의 루프 패스를 지정 --> 
+	  	<sourceDirectory>${basedir}/src</sourceDirectory>
+	  	
+	  	<!-- 테스트 소스 코드의 루프 패스를 지정 -->
+	  	<testSourceDirectory>${basedir}/test</testSourceDirectory>
+	  	
+	  	<!-- 빌드된 소스의 저장 패스를 지정 -->
+	  	<outputDirectory>${basedir}/target/classes</outputDirectory>
+	  	
+	  	<!-- 빌드된 테스트 소스의 저장 패스를 지정 -->
+	  	<testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory>
+		
+		<!-- 소스 이외의 리소스 파일들의 루프 패스를 지정 --> 
+	  	<resources>
+	  		<resource>
+	  			<directory>${basedir}/src</directory>
+	  			<excludes>
+	  				<exclude>**/*.java</exclude>
+	  			</excludes>
+	  		</resource>
+	  	</resources>
+
+		<!-- 소스 이외의 테스트 리소스 파일들의 루프 패스를 지정 -->
+	  	<testResources>
+	  		<testResource>
+	  			<directory>${basedir}/test</directory>
+	  			<excludes>
+	  				<exclude>**/*.java</exclude>
+	  			</excludes>
+	  		</testResource>
+	  		<testResource>
+	  			<directory>${basedir}/test/resource</directory>
+	  			<excludes>
+	  				<exclude>**/*.java</exclude>
+	  			</excludes>
+	  		</testResource>
+	  	</testResources>
+		
+		<!-- plug-in 관련 설정 -->
+		<plugins>
+		
+			<!-- :::::::::: war-plugin :::::::::: -->
+	  		<plugin>
+	  			<groupId>org.apache.maven.plugins</groupId>
+	  			<artifactId>maven-war-plugin</artifactId>
+	  			<version>2.1.1</version>
+	  			<configuration>
+	  				<warSourceDirectory>WebContent</warSourceDirectory>
+	  			</configuration>
+	  		</plugin>
+	  		
+	  		<!-- :::::::::: compiler-plugin :::::::::: -->
+	  		<plugin>
+	    		<groupId>org.apache.maven.plugins</groupId>
+	    		<artifactId>maven-compiler-plugin</artifactId>
+	    		<version>2.3.2</version>
+	    		<configuration>
+	    			<source>1.6</source>
+	    			<target>1.6</target>
+	    			<encoding>UTF-8</encoding>
+	    		</configuration>
+	    	</plugin>
+	    	
+	    	<!-- :::::::::: site-plugin :::::::::: -->
+	  		<plugin> 
+	  			<groupId>org.apache.maven.plugins</groupId>
+	  			<artifactId>maven-site-plugin</artifactId>
+	  			<version>2.3</version>
+	  			<configuration>
+	  				<locales>ko</locales>
+	  				<inputEncoding>UTF-8</inputEncoding>
+	  				<outputEncoding>UTF-8</outputEncoding>
+	  			</configuration>
+	  		</plugin>
+	  		
+	  		<!-- :::::::::: deploy-plugin :::::::::: -->
+	  		<plugin>
+	  			<groupId>org.apache.maven.plugins</groupId>
+	  			<artifactId>maven-deploy-plugin</artifactId>
+	  			<version>2.7</version>
+	  		</plugin>
+	  		
+	  		<!-- :::::::::: tomcat-plugin :::::::::: -->
+	  		<!-- Pdf Gateway의 변환 테스트를 위해 일시적으로 주석 처리.
+	  		     Jenkins 서버와 로컬 PC가 같은 DB를 바라보고 있으므로 예상외의 결과가 나옴. 
+	  		<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat6-maven-plugin</artifactId>
+				<version>2.0-beta-1</version>
+				<configuration>
+	  				<url>http://211.174.156.95:8080/manager/html</url>
+	  				<username>epapyrus</username>
+	  				<password>epapyrus</password>	
+	  				<charset>UTF-8</charset>
+	  				<update>true</update>
+	  				<warFile>C:\.jenkins\jobs\sdp7\workspace\target\sdp7.war</warFile>  				
+	  			</configuration>
+	  			<executions>
+	  				<execution>
+	  					<phase>site</phase>
+	  					<goals>
+	  						<goal>deploy</goal>
+	  					</goals>
+	  				</execution>
+	  			</executions>
+			</plugin>  		 
+			-->
+	  		
+	  		<!-- :::::::::: antrun-plugin :::::::::: -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				 <configuration>
+	            <tasks>
+					<copy todir="${basedir}/target/site/api-doc/resources">
+						<fileset dir="${basedir}/resources/javadoc/images" />
+					</copy>     
+					<copy todir="C:\.jenkins\jobs\test-spring-controller-return-type\site\api-doc\resources">
+						<fileset dir="${basedir}/resources/javadoc/images" />
+					</copy> 
+	            </tasks>
+	            </configuration>
+	            <executions>
+		  			<execution>
+		  				<phase>site</phase>
+		  				<goals>
+		  					<goal>run</goal>
+		  				</goals>
+		  			</execution>
+		  		</executions>
+			</plugin>	  		
+			
+			<!-- :::::::::: resource-plugin :::::::::: -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			
+			<!-- 
+				maven-jar-plugin와 maven-source-plugin은 동시에 사용하는 것이 편리성을 극대화 시킬수 있으며 
+				사용시에는 아래의 goal을 사용하는 것을 권장한다.
+				clean compile jar:jar source:jar	
+			-->
+			<!-- :::::::::: jar-plugin :::::::::: -->
+			<plugin> 
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<classifier>core-0.9.6</classifier>
+					<useDefaultManifestFile>true</useDefaultManifestFile>
+					<excludes>
+			           	<exclude>**/common/conf/</exclude>	
+			           	<exclude>**/form/impl/ServletServiceController.class</exclude>
+			           	<exclude>**/form/impl/ServletServiceHandler.class</exclude>
+			           	<exclude>**/form/web/</exclude>			           	
+			           	<exclude>**/pdf/impl/DbJobHandler.class</exclude>
+			           	<exclude>**/pdf/impl/JobTicket.class</exclude>
+			           	<exclude>**/pdf/impl/PdfConvDao.class</exclude>
+			           	<exclude>**/pdf/impl/PdfConvHandlerImpl.class</exclude>
+			           	<exclude>**/pdf/impl/PdfConvExecutor.groovy</exclude>
+			           	<exclude>**/pdf/web/</exclude>
+			        	<exclude>log4j.properties</exclude>		         
+			        </excludes>
+		        </configuration>
+			</plugin>
+			
+			<!-- :::::::::: jar-source-plugin :::::::::: -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<classifier>core-0.9.6-sources</classifier>
+					<useDefaultManifestFile>true</useDefaultManifestFile>
+					<excludes>
+			           	<exclude>**/common/conf/</exclude>	
+			           	<exclude>**/form/impl/ServletServiceController.java</exclude>
+			           	<exclude>**/form/impl/ServletServiceHandler.java</exclude>
+			           	<exclude>**/form/web/</exclude>
+			           	<exclude>**/pdf/impl/DbJobHandler.java</exclude>
+			           	<exclude>**/pdf/impl/JobTicket.java</exclude>
+			           	<exclude>**/pdf/impl/PdfConvDao.java</exclude>
+			           	<exclude>**/pdf/impl/PdfConvHandlerImpl.java</exclude>
+			           	<exclude>**/pdf/impl/PdfConvExecutor.groovy</exclude>
+			           	<exclude>**/pdf/web/</exclude>
+			           	<exclude>log4j.properties</exclude>
+			           	<exclude>release history.txt</exclude>
+			         </excludes>
+			         <includePom>false</includePom>			                   
+		        </configuration>
+			</plugin>
+		</plugins>		
+		
+	</build>  
+
+
+	<!-- ===== Reporting Description ===== -->	
+	<reporting>
+		
+		<plugins>
+		
+			<!-- :::::::::: jxr-reporting :::::::::: -->
+	 		<plugin>
+	 			<groupId>org.apache.maven.plugins</groupId>
+	 			<artifactId>maven-jxr-plugin</artifactId>
+	 			<version>2.3</version>
+	 			<configuration>
+	 				<inputEncoding>UTF-8</inputEncoding>
+	 				<outputEncoding>UTF-8</outputEncoding>
+	 			</configuration>
+	 		</plugin>
+
+			<!-- :::::::::: surefire-reporting :::::::::: -->	  		
+	  		<plugin>
+	  			<groupId>org.codehaus.mojo</groupId>
+	  			<artifactId>surefire-report-maven-plugin</artifactId>
+	  			<configuration>
+			        <encoding>UTF-8</encoding>
+			        <inputEncoding>UTF-8</inputEncoding>
+			        <outputEncoding>UTF-8</outputEncoding>
+			    </configuration>
+	  			<version>2.0-beta-1</version>
+	  			<reportSets>
+	  				<reportSet>
+	  					<reports>
+	  						<report>report-only</report>
+	  					</reports>
+	  				</reportSet>
+	  			</reportSets>	  			
+	  		 	<!-- 환경설정 옵션 사항
+	  		 	<configuration>
+		           <argLine>-Xms512m -Xmx512m</argLine>
+		           <disableXmlReport>true</disableXmlReport>
+         		</configuration>	 -->  		 	
+	  		 	<!-- <inherited>true</inherited>
+	  		 	<configuration>
+	  		 		<forkMode>always</forkMode>
+	  		 		<reportFormat>xml</reportFormat>
+	  		 		<argLine>-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m</argLine>
+	  		 	</configuration> 
+	  		 	-->
+	  		</plugin>
+			
+			<!-- :::::::::: javancss-reporting :::::::::: -->
+			<plugin>
+	  			<groupId>org.codehaus.mojo</groupId>
+	  			<artifactId>javancss-maven-plugin</artifactId>
+	  			<version>2.0</version>
+	  			<configuration>
+	  				<failOnError>false</failOnError>
+	  				<sourceEncoding>UTF-8</sourceEncoding>  				
+	  			</configuration>
+	  		</plugin>
+
+			<!-- :::::::::: findbug-reporting :::::::::: -->
+			<plugin>
+	  			<groupId>org.codehaus.mojo</groupId>
+	  			<artifactId>findbugs-maven-plugin</artifactId>
+	  			<version>2.3.2</version>
+	  			<configuration>
+	  				<findbugsXmlOutput>true</findbugsXmlOutput>
+	  				<xmlOutput>true</xmlOutput>
+	  				<threshold>Normal</threshold>
+	  				<effort>Default</effort>
+	  				<!--
+	  				<includeFilterFile>
+	  					${project.parent.basedir}/findbugs-include.xml
+	  				</includeFilterFile>
+	  				<excludeFilterFile>
+						${project.parent.basedir}/findbugs-exclude.xml
+	  				</excludeFilterFile>
+	  				 -->  				
+	  			</configuration>
+	  		</plugin>
+			
+			<!-- :::::::::: checkstyle-reporting :::::::::: -->			
+	  		<plugin>
+	  			<groupId>org.apache.maven.plugins</groupId>
+	  			<artifactId>maven-checkstyle-plugin</artifactId>
+	  			<version>2.8</version>
+	  			<configuration>
+	  				<outputFileFormat>xml</outputFileFormat>
+	  				<configLocation default-value="config/sun_checks.xml">
+	  					D:/ePapyrus_dev/java/05.etc/02.CheckStyle/ePapyrus_CheckStyle_20120129.xml
+	  				</configLocation>  				
+					<!--
+					<includes>**/src/**/*.java</includes>
+					<excludes>**/test/**/*.java</excludes>
+					<excludes>**/*Test.java</excludes>
+					-->
+	  				<encoding>UTF-8</encoding>
+	  			</configuration>
+	  		</plugin>
+
+			<!-- :::::::::: javadoc-reporting :::::::::: -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<windowtitle>SDP 7.0 - API Specification</windowtitle>
+					<doctitle>SDP 7.0 - API Specification</doctitle>
+					<header>SDP 7.0 API</header>					
+					<version>1.0</version>
+					<aggregate>true</aggregate>
+					<minmemory>128m</minmemory>
+					<maxmemory>256m</maxmemory>
+					<breakiterator>true</breakiterator>
+					<stylesheetfile>${basedir}/resources/javadoc/stylesheet.css</stylesheetfile>
+					<quiet>false</quiet>
+					<source>1.6</source>
+					<verbose>true</verbose>
+					<linksource>true</linksource>					
+					<outputDirectory>${project.build.directory}/javadoc</outputDirectory>
+					<reportOutputDirectory>${project.build.directory}/javadoc</reportOutputDirectory>
+					<destDir>api-doc</destDir>					
+					<locale>ko_KR</locale>
+					<encoding>UTF-8</encoding>
+					<charset>UTF-8</charset>
+					<docencoding>UTF-8</docencoding>
+				</configuration>			
+			</plugin>
+
+			<!-- :::::::::: cobertura-reporting :::::::::: -->
+	  		<plugin>
+	  			<groupId>org.codehaus.mojo</groupId>
+	  			<artifactId>cobertura-maven-plugin</artifactId>
+	  			<version>2.5.1</version>
+	  			<configuration>
+	  				<formats>
+	  					<format>html</format>
+	  					<format>xml</format>
+	  				</formats>
+	  				<!-- 
+	  				<instrumentation>
+	  					<excludes>
+	  						<exclude>**/*Test.class</exclude>  						
+	  					</excludes>
+	  				</instrumentation> 
+	  				-->  				
+	  			</configuration>
+	  		</plugin>
+  		
+  			<!-- :::::::::: pmd-reporting :::::::::: -->
+	  		<plugin>
+	  			<groupId>org.apache.maven.plugins</groupId>
+	  			<artifactId>maven-pmd-plugin</artifactId>
+	  			<configuration>
+	  				<sourceEncoding>UTF-8</sourceEncoding>
+	  				<targetJdk>1.5</targetJdk>
+	  				<rulesets>
+	  					<ruleset>${basedir}/test/resource/pmd/pmd.xml</ruleset>
+	  				</rulesets>
+	  				<includes>
+	  					<include>**/*.java</include>
+	  				</includes>
+	  				<!--
+	  				<excludes>
+	  					<exclude>**/*bar.java</exclude>
+	  				</excludes>
+	  				<excludeRoots>src/main/java/stubs</excludeRoots>
+	  				 -->
+	  			</configuration>
+	  			<version>2.6</version>
+	  			<reportSets>
+					<reportSet>
+						<reports>
+							<!--<report>pmd</report>-->
+							<report>cpd</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+	  		</plugin>
+
+			<!-- :::::::::: jdepend-reporting :::::::::: -->
+	  		<plugin>
+	  			<groupId>org.codehaus.mojo</groupId>
+	  			<artifactId>jdepend-maven-plugin</artifactId>
+	  			<version>2.0-beta-2</version>
+	  			<configuration>
+	  				<encoding>UTF-8</encoding>
+	  				<classDirectory>${basedir}/target/classes</classDirectory>
+	  				<outputDirectory>${basedir}/target/classes/site</outputDirectory>
+	  			</configuration>
+	  		</plugin>
+	  		
+			<!-- :::::::::: surefire-reporting :::::::::: -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				 <version>2.12</version>	
+				<configuration>
+					<forkMode>always</forkMode>
+					<excludes>
+						<exclude>**/PdfToolsImplTest.java</exclude>
+						<exclude>**/TestUtils.java</exclude>
+						<exclude>**/SdpJUnit4.java</exclude>
+						<exclude>**/MergeTestSample.java</exclude>
+						<exclude>**/JobWorkflow*.java</exclude>
+						<exclude>**/PdfConvExecutorTest.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>	
+	  		
+		</plugins>
+		
+	</reporting>
+	
+	 <!-- <scm>
+        <developerConnection>scm:svn:<Subversion project path to trunk here></developerConnection>
+        <connection>scm:svn:<Subversion project path to trunk here></connection>
+        <url><Subversion project path to trunk here></url>
+    </scm> -->  
+</project>
